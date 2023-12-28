@@ -6,20 +6,21 @@ import List from './components/List/List';
 import Map from './components/Map/Map';
 
 const App = () => {
-    return(
+    const coordinates = [10.77, 106.69];
+    return (
         <>
-            <CssBaseline/>
-            <Header/>
+            <CssBaseline />
+            <Header />
             <Grid container spacing={3} style={{ width: '100%' }}>
-                <Grid item sx={12} md={4}>
-                    <List/>
+                <Grid item sx={12} md={5}>
+                    <List />
                 </Grid>
-                <Grid item sx={12} md={8}>
+                <Grid item sx={12} md={7}>
                     <Map/>
                 </Grid>
             </Grid>
         </>
-    ); 
+    );
 };
 
 export default App;
