@@ -2,23 +2,16 @@ import React, { useState } from "react";
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from "@material-ui/core";
 import useStyles from './styles';
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
-const List = () => {
+
+
+const List = ( { places } ) => {
     const classes = useStyles();
     const [ Type, setType ] = useState('restaurants');
     const [ Rating, setRating ] = useState(0)
 
-    const places = [
-        {name:'cool Places'},
-        {name:'Best Steak'},
-        {name:'Best BBQ'},
-        {name:'cool Places'},
-        {name:'Best Steak'},
-        {name:'Best BBQ'},
-    ]
-
     return (
         <div className={classes.container}>
-            <Typography variant="h4">Restaurants, Hotels $ Attractions around you</Typography>
+            <Typography variant="h4">Restaurants, Hotels & Attractions around you</Typography>
             <FormControl
                 className={classes.FormControl}>
                 <InputLabel>Type</InputLabel>
